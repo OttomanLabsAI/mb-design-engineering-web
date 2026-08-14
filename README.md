@@ -1,9 +1,14 @@
 # mb-design-engineering-web
 
-Event site for **Muslims In Construction** — currently the **Box Hill Trek for
-READ Foundation** page (Saturday 12 September 2026). Served as [Cloudflare
-Workers static assets](https://developers.cloudflare.com/workers/static-assets/):
+Event site for **Muslims In Construction**, served as [Cloudflare Workers
+static assets](https://developers.cloudflare.com/workers/static-assets/):
 everything in `public/` is the site, there is no build step.
+
+Routes:
+
+- `/` — **Box Hill Trek for READ Foundation** (Saturday 12 September 2026)
+- `/gala/` — **MIC Gala 2026** awards dinner (Saturday 28 November 2026), with
+  the printed leaflet (PDF and front image) served alongside it
 
 ## Structure
 
@@ -14,9 +19,15 @@ public/                     everything served
   favicon.svg / favicon.ico / apple-touch-icon.png
   robots.txt
   _headers                  security + caching headers
+  gala/
+    index.html              the gala page (content as supplied)
+    mic-gala-2026-leaflet.pdf
+    mic-gala-2026-leaflet-front.png
   assets/
     css/main.css            trek page styles (split out of the original file)
+    css/gala.css            gala page styles (split out of the original file)
     js/countdown.js         trek page countdown (split out of the original file)
+    js/gala.js              gala countdown, scroll reveal, notify form
 wrangler.jsonc              assets-only Worker config, no script
 package.json                wrangler devDependency + dev/deploy/check scripts
 CLAUDE.md                   standing git + release policy and the release ledger
@@ -58,11 +69,26 @@ HTML always revalidates, so releases are visible immediately.
 Kept as absolute URLs on purpose — do not vendor them:
 
 - **Google Fonts** (`fonts.googleapis.com`, `fonts.gstatic.com`) — Big
-  Shoulders Display, Archivo, JetBrains Mono.
-- **WhatsApp group invite** (`chat.whatsapp.com`) and the National Trust Box
-  Hill page (`nationaltrust.org.uk`) — outbound links on the page.
+  Shoulders Display, Archivo, JetBrains Mono on the trek page; Archivo,
+  Newsreader, IBM Plex Mono on the gala page.
+- **Google Maps embed** (`www.google.com/maps`) — the venue map iframe on the
+  gala page.
+- **Open Graph image** for the gala page — hosted on
+  `muslimsinconstruction.uk` (the organisation's WordPress media library).
+- **Outbound links** — WhatsApp (`chat.whatsapp.com`, `api.whatsapp.com`),
+  the National Trust Box Hill page, LinkedIn, Instagram, TikTok.
 
-The page's canonical URL points at `muslimsinconstruction.uk` (the
+The pages' canonical URLs point at `muslimsinconstruction.uk` (the
 organisation's own domain); that domain is not reachable from the build
 environment used to assemble this repo, which is fine — nothing served here
 depends on it.
+
+## Content notes, as supplied
+
+- The trek page carries the owner's `TBC` review markers deliberately
+  (meeting point, route, fundraising link and similar) — it is a Rev. A draft
+  for review.
+- On the gala page the three "Book" buttons are placeholders (`href="#"`)
+  until a booking platform is chosen, and the nominations notify form has no
+  backend endpoint yet — the script acknowledges locally and is marked for
+  replacement with a real endpoint. Both are exactly as in the supplied file.

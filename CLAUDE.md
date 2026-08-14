@@ -75,3 +75,4 @@ detail they flag.
 | Version | Title | Description |
 | --- | --- | --- |
 | v1.0 | The Box Hill trek page goes live | The trek page for READ Foundation now stands as its own site — the route in profile, what to bring, how to get there, where the money goes, and a countdown running to the day. It comes with a matching lost-path page and a contour-ring icon, wired so every future release publishes itself. |
+| v1.1 | The gala takes its place beside the trek | The MIC Gala 2026 page now lives on the site as well — tickets, the run of show, the eight awards, sponsorship, travel and the questions people ask, with the printed leaflet there to download and pass on. Each event now has its own address under one roof. |
