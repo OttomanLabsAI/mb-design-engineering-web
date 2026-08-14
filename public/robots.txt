@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+# Pitch page — remove this line with the pitch (README: "Removing the pitch")
+Disallow: /offer

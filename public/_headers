@@ -15,3 +15,9 @@
 
 /
   Cache-Control: public, max-age=0, must-revalidate
+
+# Pitch page: keep it fresh and out of search results.
+# Remove this whole block with the pitch (README: "Removing the pitch").
+/offer
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Robots-Tag: noindex

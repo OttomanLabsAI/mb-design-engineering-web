@@ -1,0 +1,31 @@
+/* ============================================================
+   PITCH CHROME — the numbered tab bar wrapped around the demo,
+   plus the two offsets that tuck the site's sticky nav beneath
+   it. DELETE THIS FILE when the client says yes, and strip the
+   fenced PITCH-CHROME blocks from index.html
+   (README: "Removing the pitch").
+   ============================================================ */
+.pitchbar{
+  position:sticky;top:0;z-index:60;display:flex;align-items:stretch;
+  height:42px;background:#17191D;border-bottom:1px solid #000;
+}
+.pitchbar a{
+  display:flex;align-items:center;height:42px;padding:0 20px;
+  font-family:'Space Mono','Courier New',monospace;font-weight:700;
+  font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
+  text-decoration:none;color:#9AA2AC;white-space:nowrap;
+}
+.pitchbar a:hover{color:#FFFFFF}
+.pitchbar a[aria-current="page"]{background:var(--orange,#E4581B);color:#FFFFFF}
+.pitchbar__note{
+  margin-left:auto;align-self:center;padding:0 20px;
+  font-family:'Space Mono','Courier New',monospace;font-size:.62rem;
+  letter-spacing:.18em;text-transform:uppercase;color:#6C757F;white-space:nowrap;
+}
+@media(max-width:640px){
+  .pitchbar__note{display:none}
+  .pitchbar a{padding:0 14px;letter-spacing:.1em}
+}
+/* tuck the site's own sticky nav under the bar */
+.nav{top:42px}
+.section{scroll-margin-top:118px}

@@ -1,0 +1,55 @@
+/* ============================================================
+   THE OFFER — pitch tab 2. Built from the site's own parts:
+   every colour, face and border here comes from main.css
+   tokens. This file is deleted with the pitch (README:
+   "Removing the pitch"); nothing in it is needed by the site.
+   ============================================================ */
+
+/* ---------- tale of the tape ---------- */
+.tape{margin-top:44px;background:var(--white);border:1.5px solid var(--ink)}
+.tape__head{display:grid;grid-template-columns:1fr 1fr;border-bottom:1.5px solid var(--ink)}
+.tape__h{
+  font-family:var(--mono);font-weight:700;font-size:.72rem;
+  letter-spacing:.18em;text-transform:uppercase;padding:13px 20px 11px;
+}
+.tape__h--no{color:var(--steel)}
+.tape__h--yes{background:var(--orange);color:var(--white)}
+.tape__pair + .tape__pair{border-top:1px solid var(--rule)}
+.tape__topic{
+  font-family:var(--mono);font-weight:700;font-size:.62rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--steel);
+  padding:16px 20px 0;
+}
+.tape__row{display:grid;grid-template-columns:1fr 1fr}
+.tape__cell{padding:8px 20px 18px;font-size:.95rem}
+.tape__cell--no{color:var(--body-ink);border-right:1px solid var(--rule)}
+.tape__cell--yes{color:var(--ink);font-weight:500}
+.tape__cell::before{
+  content:attr(data-side);display:none;font-family:var(--mono);
+  font-weight:700;font-size:.6rem;letter-spacing:.18em;
+  text-transform:uppercase;margin-bottom:5px;
+}
+@media(max-width:719px){
+  .tape__head{display:none}
+  .tape__row{grid-template-columns:1fr}
+  .tape__cell{padding:8px 18px 14px}
+  .tape__cell--no{border-right:none}
+  .tape__cell::before{display:block}
+  .tape__cell--no::before{color:var(--steel)}
+  .tape__cell--yes::before{color:var(--orange)}
+  .tape__topic{padding:14px 18px 0}
+}
+
+/* ---------- price cards ---------- */
+.band{background:var(--white);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.price-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));
+  gap:24px;margin-top:44px;max-width:900px;
+}
+.price-fig{
+  font-family:var(--display);font-weight:700;
+  font-size:clamp(3.2rem,9vw,4.8rem);line-height:.9;
+  letter-spacing:.01em;color:var(--ink);margin:2px 0 4px;
+}
+.price-note{max-width:60ch;margin-top:28px;color:var(--body-ink)}
+.price-note strong{color:var(--ink)}
