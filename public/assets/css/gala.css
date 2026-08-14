@@ -288,3 +288,7 @@ h3{font-size:clamp(1.05rem,1.5vw,1.28rem);font-variation-settings:'wdth' 104,'wg
   .datum-body{padding-left:1.7rem}
   .capture{flex-direction:column;align-items:stretch}
 }
+
+/* the bar title doubles as the way back to the events home */
+a.bar-mark{text-decoration:none; color:inherit}
+a.bar-mark:hover{color:var(--brass)}

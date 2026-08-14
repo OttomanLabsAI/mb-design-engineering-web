@@ -6,9 +6,15 @@ everything in `public/` is the site, there is no build step.
 
 Routes:
 
-- `/` — **Box Hill Trek for READ Foundation** (Saturday 12 September 2026)
+- `/` — the **next event**: Box Hill Trek for READ Foundation (Saturday
+  12 September 2026), with a **Future events** strip near the foot of the
+  page — the gala leaflet image is the link into the gala page
 - `/gala/` — **MIC Gala 2026** awards dinner (Saturday 28 November 2026), with
-  the printed leaflet (PDF and front image) served alongside it
+  the printed leaflet (PDF and front image) served alongside it; the bar
+  title links back to `/`
+
+When the trek has passed, the structure rotates: the gala (or whatever is
+next) takes the homepage and the future-events strip points onward.
 
 ## Structure
 
@@ -33,9 +39,12 @@ package.json                wrangler devDependency + dev/deploy/check scripts
 CLAUDE.md                   standing git + release policy and the release ledger
 ```
 
-The page's content, design, and behaviour are exactly as supplied; the inline
+The pages' content, design, and behaviour are as supplied; the inline
 `<style>` and `<script>` blocks were moved to `assets/` unchanged. The `TBC`
 tags visible on the page are the owner's review markers, kept deliberately.
+Two owner-requested structural additions sit on top: the homepage's "Future
+events" strip (leaflet image linking to `/gala/`, styled from the trek page's
+own vocabulary) and the gala bar title linking home.
 
 ## Local development
 
