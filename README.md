@@ -55,10 +55,11 @@ For a quick look without wrangler: `python3 -m http.server -d public`.
 
 ## Deployment
 
-The repo is meant to be connected to **Cloudflare Workers Builds** (Workers &
-Pages → Create → Import a repository): every push to `main` then deploys to
-production automatically. Manual deploys are `npm run deploy` with a logged-in
-wrangler.
+The repo is connected to **Cloudflare Workers Builds**: every push to `main`
+deploys to production automatically (builds install from the lockfile, then run
+`npx wrangler deploy`). Manual deploys are `npm run deploy` with a logged-in
+wrangler. If the connection ever needs redoing: Workers & Pages → Create →
+Import a repository.
 
 Caching is set in `public/_headers`: `assets/` is cached hard for a year, so
 **rename an asset file when its contents change** (and update its references);
