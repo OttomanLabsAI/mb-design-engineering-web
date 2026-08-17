@@ -18,8 +18,8 @@ public/
   robots.txt
   _headers            security + caching headers
   assets/css/
-    main.v1.css       the site's stylesheet — assets cache immutable for a
-                      year, so bump the name (v2, v3…) whenever it changes
+    main.v2.css       the site's stylesheet — assets cache immutable for a
+                      year, so bump the name (v3, v4…) whenever it changes
     offer.css         offer-page components        (pitch only)
     pitch.css         tab-bar chrome + nav offsets (pitch only)
 wrangler.jsonc        assets-only Cloudflare config, no Worker script

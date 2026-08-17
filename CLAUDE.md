@@ -14,7 +14,7 @@ public/            everything served
   index.html       the site (fenced PITCH-CHROME blocks inside)
   offer.html       pitch tab 2 - the offer, served at /offer
   404.html
-  assets/css/      main.v1.css (the site — bump the name when it changes,
+  assets/css/      main.v2.css (the site — bump the name when it changes,
                    assets cache immutable) + offer.css/pitch.css (pitch only)
   _headers         security + caching headers
   robots.txt
@@ -83,3 +83,4 @@ site's own stylesheet and component vocabulary on purpose; keep it that way.
 | --- | --- | --- |
 | v1.0 | The site, the pitch, and the price | The MB Design Solutions site stands in full at the root — drawing-sheet design, services, process and reviews — with a second tab that makes the case for having it and puts a price on saying yes. Verified at phone and desktop widths, ready for Cloudflare to deploy on every push. |
 | v1.1 | The site always arrives properly dressed | Browsers that saw the event pages briefly occupying this address could keep wearing that stylesheet over the new site for up to a year. The site's own look now arrives under a fresh name that every visitor fetches clean, and the pages render correctly even opened straight from the files. |
+| v1.2 | The title block now takes you places | The drawing-sheet footer keeps its look but works like a footer should: every panel is a live link — services, process, about and reviews above; the office on the map, the phone, WhatsApp and a quote email below. Phones also stop underlining the company number as if it were one. |

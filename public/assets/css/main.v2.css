@@ -299,3 +299,8 @@ h2{
   .svc,.svc:hover{transform:none;transition:none}
   .btn{transition:none}
 }
+
+/* ---------- title-block footer links (v2) ---------- */
+a.tblock__cell{text-decoration:none;color:inherit}
+a.tblock__cell:hover .tblock__v,
+a.tblock__cell:focus-visible .tblock__v{color:var(--orange)}
